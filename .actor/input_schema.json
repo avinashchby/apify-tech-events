@@ -7,8 +7,8 @@
     "sources": {
       "title": "Sources to scrape",
       "type": "array",
-      "items": { "type": "string", "enum": ["luma", "partiful"] },
-      "description": "Which platforms to scrape. Default: both.",
+      "items": { "type": "string" },
+      "description": "Which platforms to scrape: 'luma', 'partiful', or both. Default: [\"luma\", \"partiful\"].",
       "default": ["luma", "partiful"],
       "editor": "json"
     },
@@ -27,8 +27,8 @@
     "tags": {
       "title": "Event tags filter",
       "type": "array",
-      "items": { "type": "string", "enum": ["hackathon", "demo-day", "investor-dinner", "conference", "workshop", "networking", "other"] },
-      "description": "Only return events matching these auto-tags",
+      "items": { "type": "string" },
+      "description": "Only return events matching these auto-tags. Options: hackathon, demo-day, investor-dinner, conference, workshop, networking, other",
       "editor": "json"
     },
     "priceType": {
