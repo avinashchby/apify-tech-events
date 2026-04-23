@@ -1,5 +1,4 @@
 {
-  "actorSpecification": 1,
   "title": "Tech Events Aggregator Input",
   "description": "Scrape tech events from Luma and Partiful with keyword and location filters.",
   "type": "object",
