@@ -1,7 +1,7 @@
 {
   "actorSpecification": 1,
   "name": "tech-events-aggregator",
-  "title": "Tech Events Aggregator — Luma & Partiful Scraper with Auto-Tagging",
+  "title": "Tech Events Aggregator — Luma & Partiful with Auto-Tagging",
   "description": "Scrape tech events from Lu.ma and Partiful. Auto-tags each event as hackathon, demo day, investor dinner, conference, workshop, or networking. Outputs Notion/Airtable-ready JSON with organizer, tags, format, and ticket info.",
   "version": "1.0",
   "buildTag": "latest",
