@@ -1,0 +1,38 @@
+{
+  "actorSpecification": 1,
+  "name": "tech-events-aggregator",
+  "title": "Tech Events Aggregator — Luma & Partiful Scraper with Auto-Tagging",
+  "description": "Scrape tech events from Lu.ma and Partiful. Auto-tags each event as hackathon, demo day, investor dinner, conference, workshop, or networking. Outputs Notion/Airtable-ready JSON with organizer, tags, format, and ticket info.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": ["SCRAPING", "MARKETING"],
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 3600,
+    "memoryMbytes": 4096
+  },
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "Tech Events",
+      "views": {
+        "overview": {
+          "title": "Events",
+          "transformation": { "fields": ["name", "url", "startAt", "location", "tags", "isFree", "source"] },
+          "display": {
+            "component": "table",
+            "properties": {
+              "name": { "label": "Event Name", "format": "text" },
+              "url": { "label": "URL", "format": "link" },
+              "startAt": { "label": "Date", "format": "datetime" },
+              "location": { "label": "Location", "format": "text" },
+              "tags": { "label": "Tags", "format": "text" },
+              "isFree": { "label": "Free?", "format": "boolean" },
+              "source": { "label": "Source", "format": "text" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

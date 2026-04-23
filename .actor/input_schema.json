@@ -1,0 +1,53 @@
+{
+  "actorSpecification": 1,
+  "title": "Tech Events Aggregator Input",
+  "description": "Scrape tech events from Luma and Partiful with keyword and location filters.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "sources": {
+      "title": "Sources to scrape",
+      "type": "array",
+      "items": { "type": "string", "enum": ["luma", "partiful"] },
+      "description": "Which platforms to scrape. Default: both.",
+      "default": ["luma", "partiful"],
+      "editor": "json"
+    },
+    "query": {
+      "title": "Search keyword",
+      "type": "string",
+      "description": "Keywords to filter events (e.g. 'AI', 'crypto', 'startup')",
+      "editor": "textfield"
+    },
+    "city": {
+      "title": "City",
+      "type": "string",
+      "description": "City to filter by (e.g. 'San Francisco', 'New York')",
+      "editor": "textfield"
+    },
+    "tags": {
+      "title": "Event tags filter",
+      "type": "array",
+      "items": { "type": "string", "enum": ["hackathon", "demo-day", "investor-dinner", "conference", "workshop", "networking", "other"] },
+      "description": "Only return events matching these auto-tags",
+      "editor": "json"
+    },
+    "priceType": {
+      "title": "Price filter",
+      "type": "string",
+      "enum": ["free", "paid", "both"],
+      "description": "Filter by ticket price",
+      "default": "both",
+      "editor": "select"
+    },
+    "maxResults": {
+      "title": "Max results",
+      "type": "integer",
+      "description": "Maximum total events to return. Default: 100.",
+      "default": 100,
+      "minimum": 1,
+      "maximum": 500,
+      "editor": "number"
+    }
+  }
+}
